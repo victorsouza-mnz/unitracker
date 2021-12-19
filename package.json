@@ -1,0 +1,12 @@
+{
+    "name": "com.victorsouza-mnz.unitracker",
+    "version": "1.0.0",
+    "displayName": "Unitrakcer Unity Project",
+    "description": "Work for Advanced Topics In Software Engineering \n A collection of 3D scripts and prefabs that makes your data tracking more easy and less code coupled",
+    "unity": "2021.2",
+    "author": {
+        "name": "Victor Souza de Menezes (DonPodre)",
+        "email": "victorsm@id.uff.br",
+        "url": "https://github.com/victorsouza-mnz/unitracker"
+    }
+}
