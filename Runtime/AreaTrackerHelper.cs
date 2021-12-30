@@ -9,10 +9,9 @@ namespace Unitracker.Tools
     public static class AreaTrackerHelper
     {
 
-        public static void TrackerArea(Collider other, string Action, string RoomName)
+        public static void TrackerArea(Collider other, string Action, string RoomName, string TagToTracker)
         {
-            Debug.Log(other.gameObject.tag);
-            if (other.gameObject.CompareTag("Player"))
+            if (other.gameObject.CompareTag(TagToTracker))
             {
                 CSVHelper.WriteCSVAreaLine(RoomName, Action);
             }

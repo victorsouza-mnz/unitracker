@@ -9,21 +9,37 @@ namespace Unitracker.Tools
     {
 
         public bool AreaTracker;
-        public string TagsToTrack;
+        public string TagToTrack;
         public string RoomName;
 
+        //Initializing the csv in order to store de spatial data
         void Start()
         {
-            CSVHelper.init();
+            if (AreaTracker)
+            {
+                CSVHelper.initRoomEvents();
+            }
+
+            CSVHelper.initCustomEvents();
+
         }
+
+
+
         public void OnTriggerEnter(Collider other)
         {
-            AreaTrackerHelper.TrackerArea(other, "Enter", RoomName);
+            if (AreaTracker)
+            {
+                AreaTrackerHelper.TrackerArea(other, "Enter", RoomName, TagToTrack);
+            }
         }
 
         public void OnTriggerExit(Collider other)
         {
-            AreaTrackerHelper.TrackerArea(other, "Exit", RoomName);
+            if (AreaTracker)
+            {
+                AreaTrackerHelper.TrackerArea(other, "Exit", RoomName, TagToTrack);
+            }
         }
     }
 
